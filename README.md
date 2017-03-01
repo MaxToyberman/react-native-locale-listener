@@ -30,8 +30,10 @@ for example reloading the app when the locale changed.
 add to AndroidManifest.xml this :
 ```Android
 android:configChanges="layoutDirection|locale"
-
+```
 and to MainActivity.java
+```
+
 @Override
 public void onConfigurationChanged(Configuration newConfig) {
     super.onConfigurationChanged(newConfig);
