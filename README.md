@@ -1,6 +1,7 @@
 
 # react-native-locale-listener
-
+The library allows you to listen to locale changes on your device.
+for example reloading the app when the locale changed.
 ## Getting started
 
 `$ npm install react-native-locale-listener --save`
@@ -26,9 +27,34 @@
       compile project(':react-native-locale-listener')
   	```
 ## Usage
+add to AndroidManifest.xml this :
+```Android
+android:configChanges="layoutDirection|locale"
+
+and to MainActivity.java
+@Override
+public void onConfigurationChanged(Configuration newConfig) {
+    super.onConfigurationChanged(newConfig);
+    Intent intent = new Intent("onConfigurationChanged");
+    intent.putExtra("newConfig", newConfig);
+    this.sendBroadcast(intent);
+}
+```
+you can use it anywhere
 ```javascript
 import RNReactNativeLocale from 'react-native-locale-listener';
 
-// TODO: What to do with the module?
-RNReactNativeLocale;
+changeLayout(language) {
+    // Do what you need here
+    RNRestart.Restart();
+}
+
+componentDidMount () {
+  RNReactNativeLocale.addLocaleListener(this.changeLayout)
+}
+
+componentWillUnmount() {
+  // prevent leaking
+  RNReactNativeLocale.removeLocaleListener(this.changeLayout)
+}
 ```
