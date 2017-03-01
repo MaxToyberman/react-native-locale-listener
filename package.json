@@ -1,6 +1,6 @@
 {
-  "name": "react-native-locale-listener-listener",
-  "version": "1.0.3",
+  "name": "react-native-locale-listener",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
