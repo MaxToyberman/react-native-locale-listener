@@ -1,0 +1,16 @@
+version: '1.0'
+steps:
+
+  build_image:
+    title: Builder image ...
+    type: build
+    image_name: olsynt/react-native-locale
+  
+  deploy_to_npm:
+    title: Publishing To Npm
+    image: ${{build_image}}
+    commands:
+      - NPM_TOKEN=${{NPM_TOKEN}} npm run ci-publish
+    when:
+      branch:
+        only: [ master ]
