@@ -4,7 +4,7 @@ steps:
   build_image:
     title: Builder image ...
     type: build
-    image_name: olsynt/react-native-locale
+    image_name: maxtoyberman/react-native-locale
   
   deploy_to_npm:
     title: Publishing To Npm
