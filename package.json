@@ -1,16 +1,22 @@
 {
   "name": "react-native-locale-listener",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "main": "index.js",
   "scripts": {
     "ci-publish": "ci-publish"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "react-native-locale-reload",
+
   ],
-  "author": "",
+  "author": "Max Toyberman",
   "license": "",
+  "bugs": {
+    "url": "https://github.com/MaxToyberman/react-native-locale-listener/issues"
+  },
+  "homepage": "https://github.com/MaxToyberman/react-native-locale-listener#readme",
   "peerDependencies": {
     "react-native": "^0.41.2",
     "react-native-windows": "0.41.0-rc.1"
