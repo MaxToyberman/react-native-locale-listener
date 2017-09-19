@@ -17,7 +17,6 @@ public class RNReactNativeLocalePackage implements ReactPackage {
       return Arrays.<NativeModule>asList(new RNReactNativeLocaleModule(reactContext));
     }
 
-    @Override
     public List<Class<? extends JavaScriptModule>> createJSModules() {
       return Collections.emptyList();
     }
