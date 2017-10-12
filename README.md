@@ -14,8 +14,8 @@ for example reloading the app when the locale changed.
 
 #### Android
 
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import com.reactlibrary.RNReactNativeLocalePackage;` to the imports at the top of the file
+1. Open up `android/app/src/main/java/[...]/MainApplication.java`
+  - Add `import com.toyberman.localeReload.RNReactNativeLocalePackage;` to the imports at the top of the file
   - Add `new RNReactNativeLocalePackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
   	```
@@ -33,7 +33,9 @@ android:configChanges="layoutDirection|locale"
 ```
 and to MainActivity.java
 ```
-
+import android.content.res.Configuration;
+import android.content.Intent;
+...
 @Override
 public void onConfigurationChanged(Configuration newConfig) {
     super.onConfigurationChanged(newConfig);
