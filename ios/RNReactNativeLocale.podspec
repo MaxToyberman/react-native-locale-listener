@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/author/RNReactNativeLocale.git", :tag => "master" }
   s.source_files  = "RNReactNativeLocale/**/*.{h,m}"
   s.requires_arc = true
-
+  s.homepage = "https://github.com/AlexanderZaytsev/react-native-i18n"
 
   s.dependency "React"
   #s.dependency "others"
